@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Results</title>
+</head>
+<body>
+    <h1>
+        Exam Results
+    </h1>
+    <script>
+        function Results(){
+         let Student_Name = prompt('Enter the name of the students');
+         let S1 = Number(prompt('Enter marks'));
+         let S2 = Number(prompt('Enter marks'));
+         let S3 = Number(prompt('Enter marks'));
+         let S4 = Number(prompt('Enter marks'));
+         let S5 = Number(prompt('Enter marks'));
+         let S6 = Number(prompt('Enter marks'));
+         if(S1>=35 && S2>=35 && S3>=35 && S4>=35 && S5>=35 && S6>=35)
+         {  
+            console.log(Student_Name)
+            console.log(`Pass`);
+            let Total=S1+S2+S3+S4+S5+S6;
+            let aggregate=Math.trunc((Total/600)*100);
+            console.log(`Aggregate= ${aggregate}%`);
+            if(aggregate>=90){
+                console.log(`A+`);
+            }
+            if(aggregate>=80 && aggregate<=89){
+                console.log(`A`);
+            }
+            if(aggregate>=70 && aggregate<=79){
+                console.log(`B+`);
+            }
+            if(aggregate>=60 && aggregate<=69){
+                console.log(`B`);
+            }
+            if(aggregate>=50 && aggregate<=59){
+                console.log(`C+`);
+            }
+            if(aggregate>=40 && aggregate<=49){
+                console.log(`C`);
+            }
+            if(aggregate>=35 && aggregate<=39){
+                console.log(`D+`);
+            }
+            
+         }
+        else{
+            console.log(Student_Name )
+            console.log(`Fail`);
+        }
+        }
+        Results();
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No of Days in a Month</title>
+</head>
+<body>
+    <script>
+           function Leapyear(){
+           let year = Number(prompt("Enter the Year"));
+           let month = Number(prompt("Enter th Month"))
+           if(month===1 || month===3 || month===5 ||month===7 ||month===8 ||month===10 ||month===12)
+           {
+                    console.log(`in ${year} year, ${month} no of days are 31`);
+                    }
+            else if(month===4 || month===6 || month===9 || month===11){
+                    console.log(`in ${year} year, ${month} no of days are 30`)
+                    }
+            else if(month===2){
+                if((year%400===0)||(year%4===0 && year%100!==0)){
+                    console.log (`in ${year} year, ${month} no of days are 29`);
+                }
+           else{
+            console.log(`in ${year} year, ${month} no of days are 28`);
+           }
+        }
+    }
+        Leapyear();
+    </script>
+</body>
+</html>

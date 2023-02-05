@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money counter</title>
+</head>
+<body>
+    <h1>
+        Money Counter
+    </h1>
+    <script>
+        function Moneycounter(){
+            let Amount = Number(prompt("Enter the Amount"));
+            if(Amount>=2000){
+                let count2000 = Math.trunc((Amount/2000));
+                console.log(`2000*${count2000}=${2000*count2000}`);
+                Amount = (Amount%2000);
+            }
+            if(Amount>=500){
+                let count500 = Math.trunc((Amount/500));
+                console.log(`500*${count500}=${500*count500}`);
+                Amount = (Amount%500);
+            if(Amount>=200){
+                let count200 = Math.trunc((Amount/200));
+                console.log(`200*${count200}=${200*count200}`);
+                Amount = (Amount%200);
+            }
+            if(Amount>=100){
+                let count100 = Math.trunc((Amount/100));
+                console.log(`100*${count100}=${100*count100}`);
+                Amount = (Amount%100);
+            }
+        }
+    }
+        Moneycounter();
+    </script>
+</body>
+</html>
